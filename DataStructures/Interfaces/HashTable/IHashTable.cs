@@ -53,5 +53,9 @@ namespace DataStructures.Interfaces.HashTable
 
         TValue this[TKey key] { get; }
 
+        bool ContainsKey(TKey key);
+
+        bool ContainsValue(TValue value);
+
     }
 }

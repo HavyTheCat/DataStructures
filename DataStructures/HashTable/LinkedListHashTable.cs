@@ -101,6 +101,25 @@ namespace DataStructures.HashTable
              _array.Update(key, value);
         }
 
+        public bool ContainsKey(TKey key)
+        {
+            TValue value;
+            return _array.TryGetValue(key, out value);
+        }
+
+        public bool ContainsValue(TValue value)
+        {
+            foreach (TValue foundValue in _array.Values)
+            {
+                if (value.Equals(foundValue))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         /// <summary>
         /// Returns an enumerator for all of the keys in the hash table
         /// </summary>

@@ -114,6 +114,16 @@ namespace DataStructures.Node
             if (!res) throw new ArgumentException("Collection not contain key");
         }
 
+        public bool ContainsKey(TKey key)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ContainsValue(TValue value)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Returns an enumerator for all the key/value pairs in the list
         /// </summary>

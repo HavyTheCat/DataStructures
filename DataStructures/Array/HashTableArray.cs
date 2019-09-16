@@ -111,5 +111,15 @@ namespace DataStructures.Array
         {
             return Math.Abs(key.GetHashCode() % Capacity);
         }
+
+        public bool ContainsKey(TKey key)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ContainsValue(TValue value)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
