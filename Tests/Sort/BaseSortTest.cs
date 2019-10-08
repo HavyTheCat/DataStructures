@@ -17,10 +17,20 @@ namespace Test.Sort
         [TestMethod]
         public void Sort()
         {
-            int[] items = new[] { 1, 0, 9, 7, 4 };
+            Random random = new Random();
+            int randomLength = random.Next(10, 30);
+
+            var items = new int[randomLength];
+            for (int i = 0; i < randomLength; i++)
+                items[i] = random.Next(0, 100);
+
+            var checkArr = new int[randomLength];
+            items.CopyTo(checkArr, 0);
+            Array.Sort(checkArr);
+
+            //int[] items = new[] { 1, 0, 9, 7, 4 };
             T sorting = (T)Activator.CreateInstance(typeof(T));
             sorting.Sort(items);
-            var checkArr = new[] { 0, 1, 4, 7, 9 };
 
             bool res = false;
             for (int i = 0; i < items.Length; i++)
