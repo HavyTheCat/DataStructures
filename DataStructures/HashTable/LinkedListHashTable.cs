@@ -161,7 +161,10 @@ namespace DataStructures.HashTable
             }
             set
             {
-                _array.Update(key, value);
+                if (ContainsKey(key))
+                    _array.Update(key, value);
+                else
+                    Add(key, value);
             }
         }
 
