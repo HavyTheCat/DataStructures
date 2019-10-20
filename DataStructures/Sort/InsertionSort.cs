@@ -41,7 +41,7 @@ namespace DataStructures.Sort
         private void Insert(T[] items, int insertedItemIndex, int insetIndex)
         {
             // store item from inserted index
-            var storeItem = items[insetIndex];
+            var temp = items[insetIndex];
 
             //set current item in desired index
             Assign(items, insetIndex, items[insertedItemIndex]);
@@ -51,7 +51,7 @@ namespace DataStructures.Sort
                 Assign(items, i, items[i - 1]);
 
             //bring back stored item
-            Assign(items, insetIndex + 1, storeItem);        
+            Assign(items, insetIndex + 1, temp);        
         }
         private void Assign(T[] items, int insetIndex, T item) => items[insetIndex] = item;
 

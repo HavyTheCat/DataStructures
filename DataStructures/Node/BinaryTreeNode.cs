@@ -18,7 +18,7 @@ namespace DataStructures.Node
         /// <summary>
         /// Link on left node
         /// </summary>
-        public IBinaryTreeNode<T> Left { get; set; }
+        public IBinaryTreeNode<T> Left { get;  set; }
 
         /// <summary>
         /// Link on right node
@@ -28,7 +28,7 @@ namespace DataStructures.Node
         /// <summary>
         /// Current val
         /// </summary>
-        public T Value { get; private set; }
+        public T Value { get; set; }
 
         /// <summary>
         /// Compare current node to provided

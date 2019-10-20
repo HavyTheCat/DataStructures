@@ -21,9 +21,7 @@ namespace DataStructures.Sort
                 {
                     if (items[i].CompareTo(items[i + 1]) > 0)
                     {
-                        var temp = items[i];
-                        items[i] = items[i + 1];
-                        items[i + 1] = temp;
+                        Swap(items, i, i + 1);
                         swap = true;
                     }
                 }

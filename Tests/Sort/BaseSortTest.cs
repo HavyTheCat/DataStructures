@@ -34,7 +34,12 @@ namespace Test.Sort
 
             bool res = false;
             for (int i = 0; i < items.Length; i++)
+            {
                 res = items[i] == checkArr[i];
+                if (!res)
+                    break;
+            }
+
             Assert.IsTrue(res);
         }
     }

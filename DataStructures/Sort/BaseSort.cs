@@ -19,5 +19,16 @@ namespace DataStructures.Sort
         /// <param name="rightArg"></param>
         /// <returns></returns>
         protected int Compare(T leftArg, T rightArg) => leftArg.CompareTo(rightArg);
+
+        protected void Swap(T[] items, int left, int right)
+        {
+            if (left != right)
+            {
+                T temp = items[left];
+                items[left] = items[right];
+                items[right] = temp;
+            }
+        }
+
     }
 }
